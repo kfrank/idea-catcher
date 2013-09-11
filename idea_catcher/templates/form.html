@@ -1,0 +1,10 @@
+<html>
+<head><title>Test</title></head>
+<body>
+<form action="/new/" method="post">
+  {% csrf_token %}
+  <input type="text" name="idea_text">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
