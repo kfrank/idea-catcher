@@ -1,0 +1,225 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px); }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@-moz-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -moz-transform: translateY(-20px); }
+
+  to {
+    opacity: 1;
+    -moz-transform: translateY(0); } }
+
+@-o-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -o-transform: translateY(-20px); }
+
+  to {
+    opacity: 1;
+    -o-transform: translateY(0); } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); }
+
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif; }
+
+/*  BASE 
+-------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "Gotham", sans-serif; }
+
+section {
+  height: 100%;
+  width: 50%;
+  float: left;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+div {
+  display: none; }
+
+h1 {
+  font-size: 15em;
+  text-align: center;
+  margin-top: 35%; }
+
+.get-active {
+  background: #2f3438; }
+  .get-active .get {
+    width: 90%;
+    padding: 8em;
+    text-align: center; }
+    .get-active .get div {
+      display: block;
+      -webkit-animation-name: fadeInDown;
+      -moz-animation-name: fadeInDown;
+      animation-name: fadeInDown;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      animation-duration: 1.5s; }
+    .get-active .get h1 {
+      display: none; }
+  .get-active .give {
+    width: 10%; }
+    .get-active .give h1 {
+      color: transparent;
+      font: 0/0 a;
+      text-shadow: none;
+      position: absolute;
+      top: 50%;
+      margin: -1.5rem 0 0 4.5%; }
+      .get-active .give h1:before {
+        font-size: 3rem;
+        color: #2f3438; }
+
+.give-active {
+  background: #01bcb1; }
+  .give-active .get {
+    width: 10%; }
+    .give-active .get h1 {
+      color: transparent;
+      font: 0/0 a;
+      text-shadow: none;
+      position: absolute;
+      top: 50%;
+      margin: -1.5rem 0 0 3.5%; }
+      .give-active .get h1:before {
+        font-size: 3rem;
+        color: #01bcb1; }
+  .give-active .give {
+    width: 90%;
+    padding: 5em; }
+    .give-active .give h1 {
+      display: none; }
+    .give-active .give div {
+      display: block;
+      -webkit-animation-name: fadeInDown;
+      -moz-animation-name: fadeInDown;
+      animation-name: fadeInDown;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      animation-duration: 1.5s; }
+
+p {
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1.25em;
+  text-align: left; }
+
+.btn {
+  background: #fff;
+  color: #01bcb1;
+  text-decoration: none;
+  padding: 0.5em 0.75em;
+  font-size: 3em;
+  margin: 1em auto;
+  display: inline-block; }
+
+.entypo-list {
+  display: block;
+  width: 0.5em;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3em;
+  text-decoration: none; }
+
+textarea {
+  background: #01bcb1;
+  border: none;
+  width: 100%;
+  font-size: 3em;
+  line-height: 1.25em;
+  font-family: "Gotham", sans-serif;
+  color: #fff; }
+  textarea:focus {
+    outline: #01bcb1 solid 0px;
+    color: #2f3438; }
+
+/*  GET 
+-------------------------------------*/
+.get {
+  background: #2f3438;
+  color: #fff; }
+
+/*  GIVE 
+-------------------------------------*/
+.give {
+  background: #01bcb1;
+  color: #2f3438; }

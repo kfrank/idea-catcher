@@ -1,0 +1,221 @@
+@import "bourbon";
+
+$teal: #01bcb1;
+$black: #2f3438;
+
+$sans: "Gotham", sans-serif;
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@include keyframes(fadeInDown) {
+  from { opacity: 0; @include transform(translateY(-20px)); }
+  to { opacity: 1; @include transform(translateY(0)); }
+}
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+/*  BASE 
+-------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $sans;
+}
+
+section {
+  height: 100%;
+  width: 50%;
+  float: left;
+  cursor: pointer;
+
+  @include transition(all 0.5s ease);
+}
+
+div {
+  display: none;
+}
+
+h1 {
+  font-size: 15em;
+  text-align: center;
+  margin-top: 35%;
+}
+
+.get-active {
+  background: $black;
+  .get { 
+    width: 90%; 
+    padding: 8em;
+    text-align: center; 
+    div {
+      display: block;
+      @include animation-name(fadeInDown);
+      @include animation-timing-function(ease-in-out);
+      @include animation-duration(1.5s);
+    }
+    h1 {
+      display: none;
+    }
+  }
+  .give { 
+    width: 10%; 
+    h1 {
+      @include hide-text;
+      position: absolute;
+      top: 50%;
+      margin: -1.5rem 0 0 4.5%;
+
+      &:before {
+        font-size: 3rem;
+        color: $black;
+      }
+    }
+  }
+}
+.give-active {
+  background: $teal;
+  .get { 
+    width: 10%; 
+    h1 {
+      @include hide-text;
+      position: absolute;
+      top: 50%;
+      margin: -1.5rem 0 0 3.5%;
+
+      &:before {
+        font-size: 3rem;
+        color: $teal;
+      }
+    }
+  }
+  .give { 
+    width: 90%; 
+    padding: 5em;
+    h1 {
+      display: none;
+    }
+    div {
+      display: block;
+      @include animation-name(fadeInDown);
+      @include animation-timing-function(ease-in-out);
+      @include animation-duration(1.5s);
+    }
+  }
+  
+}
+
+p {
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1.25em;
+  text-align: left;
+}
+
+.btn {
+  background: #fff;
+  color: $teal;
+  text-decoration: none;
+  padding: 0.5em 0.75em;
+  font-size: 3em;
+  margin: 1em auto;
+  display: inline-block;
+}
+
+.entypo-list {
+  display: block;
+  width: 0.5em;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+textarea {
+  background: $teal;
+  border: none;
+  width: 100%;
+  font-size: 3em;
+  line-height: 1.25em;
+  font-family: $sans;
+  color: #fff;
+
+  &:focus {
+    outline: $teal solid 0px;
+    color: $black;
+  }
+}
+
+/*  GET 
+-------------------------------------*/
+
+.get {
+  background: $black;
+  color: #fff;
+}
+
+/*  GIVE 
+-------------------------------------*/
+
+.give {
+  background: $teal;
+  color: $black;
+}

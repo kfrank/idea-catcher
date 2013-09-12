@@ -1,10 +1,30 @@
-<html>
-<head><title>Test</title></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Idea Catcher</title>
+
+  <link rel="stylesheet" href="../assets/c/style.css">
+</head>
 <body>
-<form action="/new/" method="post">
-  {% csrf_token %}
-  <input type="text" name="idea_text">
-  <input type="submit" value="Submit">
-</form>
+  <section href="#" class="get">
+    <h1 class="entypo-help"></h1>
+    <div>
+      <p>Robokitty that shoots lazers out of it's tiny little evil eyes.</p>
+      <a href="#" class="btn">fuck that, next!</a>
+      <a href="#" class="entypo-list"></a>
+    </div>
+  </section>
+  <section href="#" class="give">
+    <h1 class="entypo-lamp"></h1>
+    <div>
+      {% csrf_token %}
+      <textarea name="" id="" cols="30" rows="10" placeholder="">Give idea</textarea>
+      <input type="submit" value="Submit">
+    </div>
+  </section>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="../assets/j/functions.js"></script>
 </body>
 </html>
