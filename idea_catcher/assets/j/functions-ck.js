@@ -1,1 +1,2 @@
-$(document).ready(function(){$(".get").click(function(){$("body").removeClass("give-active");$("body").addClass("get-active");$(".give h1").addClass("entypo-right-open-big")});$(".give").click(function(){$("body").removeClass("get-active");$("body").addClass("give-active");$(".get h1").addClass("entypo-left-open-big")})});
+//$(document).ready(function() {
+$(document).ready(function(){$.ajax({type:"GET",url:"http://ideacatcher.herokuapp.com/random/",async:!1,dataType:"json",success:function(e){console.log("Success!")},error:function(e,t){console.log("Uh Oh!",e,t)},response:function(e,t){console.log(e,t)}})});

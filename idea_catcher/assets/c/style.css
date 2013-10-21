@@ -116,11 +116,11 @@ h1 {
 
 .get-active {
   background: #2f3438; }
-  .get-active .get {
+  .get-active .get-random {
     width: 90%;
     padding: 8em;
     text-align: center; }
-    .get-active .get div {
+    .get-active .get-random div {
       display: block;
       -webkit-animation-name: fadeInDown;
       -moz-animation-name: fadeInDown;
@@ -131,7 +131,7 @@ h1 {
       -webkit-animation-duration: 1.5s;
       -moz-animation-duration: 1.5s;
       animation-duration: 1.5s; }
-    .get-active .get h1 {
+    .get-active .get-random h1 {
       display: none; }
   .get-active .give {
     width: 10%; }
@@ -148,16 +148,16 @@ h1 {
 
 .give-active {
   background: #01bcb1; }
-  .give-active .get {
+  .give-active .get-random {
     width: 10%; }
-    .give-active .get h1 {
+    .give-active .get-random h1 {
       color: transparent;
       font: 0/0 a;
       text-shadow: none;
       position: absolute;
       top: 50%;
       margin: -1.5rem 0 0 3.5%; }
-      .give-active .get h1:before {
+      .give-active .get-random h1:before {
         font-size: 3rem;
         color: #01bcb1; }
   .give-active .give {
@@ -214,7 +214,7 @@ textarea {
 
 /*  GET 
 -------------------------------------*/
-.get {
+.get-random {
   background: #2f3438;
   color: #fff; }
 
